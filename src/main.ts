@@ -15,16 +15,6 @@ async function bootstrap() {
   const document =  SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app,document);
 
-  const typeOrmOptions = {
-    type: 'postgres',
-    host: 'p-j5kb4zjueb.pg.biganimal.io',
-    port: 5432,
-    username: 'edb_admin',
-    password: 'pedro123456789',
-    database: 'testemkss',
-    entities: ['dist/**/*.entity{.ts,.js}'],
-    synchronize: true,
-  };
   await app.listen(3000);
 }
 bootstrap();

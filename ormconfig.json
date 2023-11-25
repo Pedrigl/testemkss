@@ -1,0 +1,11 @@
+{
+    "type": "postgres",
+    "host": "p-j5kb4zjueb.pg.biganimal.io",
+    "port": 5432,
+    "username": "edb_admin",
+    "password": "pedro123456789",
+    "database": "testemkss",
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "migrations": ["migration/*.migration.ts"],
+    "synchronize": true
+}
