@@ -17,11 +17,11 @@ async function bootstrap() {
 
   const typeOrmOptions = {
     type: 'postgres',
-    host: 'localhost',
+    host: 'p-j5kb4zjueb.pg.biganimal.io',
     port: 5432,
-    username: 'seu-usuario',
-    password: 'sua-senha',
-    database: 'nome-do-banco',
+    username: 'edb_admin',
+    password: 'pedro123456789',
+    database: 'testemkss',
     entities: ['dist/**/*.entity{.ts,.js}'],
     synchronize: true,
   };
