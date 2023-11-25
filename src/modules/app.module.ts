@@ -4,6 +4,8 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RedisModule } from 'nestjs-redis';
 import { FilmeService } from 'src/services/filme.service';
+import { Repository } from 'typeorm';
+import { Filme } from 'src/domain/entities/filmes.entity';
 
 @Module({
   imports: [
@@ -12,7 +14,7 @@ import { FilmeService } from 'src/services/filme.service';
     RedisModule.register({
         url: process.env.REDIS_URL,
     }),
-
+    TypeOrmModule.forFeature([Filme]),
   ],
   controllers: [FilmeController],
   providers: [FilmeService],

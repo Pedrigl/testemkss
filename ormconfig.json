@@ -5,7 +5,11 @@
     "username": "edb_admin",
     "password": "pedro123456789",
     "database": "testemkss",
-    "entities": ["dist/**/*.entity{.ts,.js}"],
-    "migrations": ["migration/*.migration.ts"],
+    "entities": ["src/**/*.entity{.ts,.js}"],
+    "migrations": ["src\\migrations\\*.migration.ts"], 
+    "cli": {
+        "migrationsDir": "src\\migrations"
+    },
     "synchronize": true
-}
+  }
+  

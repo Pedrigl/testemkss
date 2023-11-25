@@ -2,6 +2,6 @@ import {Entity, PrimaryGeneratedColumn, Column} from 'typeorm'
 
 export class BaseModel{
     
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('identity', {generatedIdentity: 'ALWAYS'})
     id: number;
 }
