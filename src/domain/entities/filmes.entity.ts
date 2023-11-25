@@ -17,7 +17,7 @@ export class Filme extends BaseModel{
     duracao: number;
 
     @Column()
-    anoDeLancamento: Date;
+    anoDeLancamento: number;
 
     @Column()
     classificacaoIndicativa: ClassificacaoIndicativa;

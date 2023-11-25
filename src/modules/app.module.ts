@@ -6,14 +6,12 @@ import { RedisModule } from 'nestjs-redis';
 import { FilmeService } from 'src/services/filme.service';
 import { Repository } from 'typeorm';
 import { Filme } from 'src/domain/entities/filmes.entity';
+import {typeOrmConfig} from 'typeOrm.config';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRoot(),
-    RedisModule.register({
-        url: process.env.REDIS_URL,
-    }),
+    TypeOrmModule.forRoot(typeOrmConfig),
     TypeOrmModule.forFeature([Filme]),
   ],
   controllers: [FilmeController],

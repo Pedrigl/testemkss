@@ -1,20 +1,20 @@
-import { DataSource } from 'typeorm';
+import { DataSource, DataSourceOptions } from 'typeorm';
 import { ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
  
-config();
+config({ path: 'dev.env' });
  
-const configService = new ConfigService();
+const configurations: DataSourceOptions = {
+    type: 'postgres',
+    host: process.env.DB_HOST,
+    port: parseInt(process.env.DB_PORT),
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    entities: [__dirname + '/**/domain/entities/*.entity{.ts,.js}'],
+    synchronize: true,
+    migrations: [__dirname + '/migrations/*{.ts,.js}'],
+    };
  
-export default new DataSource({
-    "type": "postgres",
-    "host": "p-j5kb4zjueb.pg.biganimal.io",
-    "port": 5432,
-    "username": "edb_admin",
-    "password": "pedro123456789",
-    "database": "testemkss",
-    "entities": ["src/**/*.entity{.ts,.js}"],
-    "migrations": ["src\\migrations\\*.ts"],     
-    "synchronize": true
-  }
-  );
+export const typeOrmConfig: TypeOrmModuleOptions = configurations;    
