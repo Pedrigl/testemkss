@@ -38,9 +38,3 @@ docker-compose up
 
 # Documentação
 A documentação da API pode ser acessada via Swagger após a execução do projeto. Visite [http://localhost:3000/api](http://localhost:3000/api) para explorar os endpoints.
-
-# Deploy
-O projeto foi implantado no ambiente [escolher o ambiente], e está acessível em [link do projeto].
-
-# Observações
-A engenharia de qualidade e a escolha cuidadosa de ferramentas refletem a dedicação e aprendizado constante do desenvolvedor. Obrigado por revisar este desafio!
