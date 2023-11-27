@@ -14,7 +14,7 @@ const configurations: DataSourceOptions = {
     database: process.env.DB_NAME,
     entities: [__dirname + '/**/domain/entities/*.entity{.ts,.js}'],
     synchronize: true,
-    migrations: [__dirname + '/migrations/*{.ts,.js}'],
+    migrations: [__dirname + '/migrations/*{.ts,.js}']
     };
- 
+
 export const typeOrmConfig: TypeOrmModuleOptions = configurations;    
